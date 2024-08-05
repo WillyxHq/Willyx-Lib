@@ -1,0 +1,54 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Willyx Lib | Home</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section class="container">
+            <section class="container_title">
+                <h1>Book Library</h1>
+                <button class="btn btn-new">New Book</button>
+                <button class="btn btn-delete">Clear Library</button>
+            </section>
+            <section class="container_content">
+            </section>
+            <section class="modal"></section>
+            <section class="modal_content">
+                <form action="" class="form">
+                    <h3>Add a Book</h3>
+                    <label for="title">Title: <span class="highlight">*</span></label>
+                    <input type="text" name="title" id="title">
+                    <label for="author">Author: <span class="highlight">*</span></label>
+                    <input type="text" name="author" id="author">
+                    <label for="pages"># of Pages: <span class="highlight">*</span></label>
+                    <input type="number" name="pages" id="pages">
+                    
+                    <div class="radio">
+                        <span>Have you read it yet? <span class="highlight">*</span></span>
+                        <span>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="radio" id="yes" value="yes">
+                        </span>
+                        <span>
+                            <label for="no">No</label>
+                            <input type="radio" name="radio" id="no" value="no">
+                        </span>
+                    </div>
+                </form>
+                <div class="btn-wrapper">
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                    <button class="btn btn-reset">Reset</button>
+                    <button class="btn btn-cancel">Cancel</button>
+                </div>
+                <p class="error"> </p>
+            </section>
+        </section>
+
+        <script src="app.js"></script>
+    </body>
+    </html> 

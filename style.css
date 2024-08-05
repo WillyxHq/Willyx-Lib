@@ -1,0 +1,272 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    background: yellow url(./img/library-background.jpg) no-repeat center/cover;
+    background-blend-mode: multiply;
+    color: lightgray;
+    overflow: hidden;
+    display: grid;
+}
+
+.btn {
+    background-color: blue !important;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    box-shadow: 0ppx 4px 5px 2px grba(0,0,0,0.2);
+}
+
+
+.btn:hover {
+    /* opacity: 0.2; */
+    background-color: red !important;
+}
+
+.container {
+    max-width: 1400px;
+    width: 90vw;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.container_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.2rem;
+    border-bottom: 2px solid rgb(7, 22, 243);
+    padding: 0.5rem;
+}
+
+.container_title h1 {
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    color: rgb(224, 255, 70);
+}
+
+.btn-new, .btn-delete {
+    width: 7rem;
+    height: 2.5rem;
+    background: red;
+    color: lightgray;
+    border: 2px solid lightgray;
+}
+
+.btn-new:hover {
+    background: transparent !important;
+}
+
+.btn-delete {
+    background: transparent !important;
+}
+
+.container_content{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 3rem;
+    padding: 4rem 0;
+}
+
+.card {
+    /* border: 1px solid white; */
+    border-radius: 8px;
+    height: 300px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    background: rgb(12, 8, 237);
+    box-shadow: 1px 1px 8px rgba(255, 255 , 255, 0.4);
+    transition: 1s ease-in;
+    /* justify-content: space-between; */
+}
+
+.card_title,
+.card_author,
+.card_pages,
+.card_read,
+.card-read-wrapper {
+    text-align: left;
+    
+    
+}
+
+.card_info {
+    height: 100%;
+}
+.card_title {
+    font-size: 1.1rem;
+}
+
+.card_read-wrapper {
+    width: 100%;
+    height: 100%;
+    /* justify-content: space-between; */
+    /* border: 2px solid yellow; */
+}
+.card_read {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.btn-remove {
+    display: block;
+    margin: auto;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: red;
+}
+
+.btn-edit {
+    background: transparent;
+    border: none;
+}
+.btn-edit i{
+    width: 1rem;
+    height: 1rem;
+    color: rgb(122, 192, 122);
+    font-size: 1.1rem;
+}
+
+.modal {
+    position: fixed;
+    /* position: relative; */
+    display: grid;
+    place-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(208, 11, 11, 0.2);
+    z-index: 1;
+    display: none;
+}
+
+.modal_open {
+    display: grid;
+}
+
+.modal_content {
+    position: fixed;
+    top: 30vh;
+    left: 35vw;
+    backdrop-filter: blur(10px);
+    background: green;
+    padding: 1rem;
+    width: 600px;
+    height: 500px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transition: 0.75s ease-in-out;
+    z-index: 2;
+    display: none;
+}
+
+.modal_content-show {
+    display: flex;
+    transition: 0.75s ease-in-out;
+    border: 2px solid white;
+}
+
+.form {
+    padding: 2rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    width: 400px;
+    width: 100%;
+    color: white;
+}
+
+form h3 {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+form input {
+    /* padding-bottom: 1.2rem; */
+    margin-bottom: 0.5rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid lightgray;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+form label {
+    padding-top: 0.5rem;
+}
+
+::placeholder {
+    color: white;
+}
+
+.btn-submit,
+.btn-reset,
+.btn-cancel {
+    padding: 0.5rem 1.2rem;
+    background: transparent;
+    border: 2px solid lightgray;
+    color: lightgray;
+}
+
+.btn-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.radio {
+    padding-top: 1rem;
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+}
+
+.highlight, .error {
+    color: red;
+    font-weight: bold;
+}
+
+.error {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_info .fas {
+    display: block;
+    font-size: 4rem;
+    text-align: center;
+    padding: 2rem;
+}
